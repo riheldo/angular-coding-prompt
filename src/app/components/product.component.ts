@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
  */
 @Component({
   selector: 'app-product',
-  template: ``,
+  templateUrl: './product.component.html',
   standalone: true,
 })
 export class ProductComponent implements OnInit {

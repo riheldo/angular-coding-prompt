@@ -16,3 +16,7 @@ As a end-user, I want to see an eCommerce application that displays products, ca
 - The application should use RxJS and reactive programming patterns to display and update elements
 
 - Use component structure with a smart/dumb component approach in mind
+
+## Extra
+
+- If time allows, create a product details page that will show all the product information
