@@ -1,0 +1,7 @@
+{
+  "name": "coding-prompt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
