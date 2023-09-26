@@ -1,29 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Blank </ion-title>
+    <ion-title>Products</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- Correctly populate with categories coming from the API -->
-  <ion-select>
-    <ion-select-option>Category 1</ion-select-option>
-    <ion-select-option>Category 2</ion-select-option>
-  </ion-select>
+  <div class="ion-padding">
+    <!-- Correctly populate with categories coming from the API -->
+    <ion-select
+      class="ion-padding"
+      placeholder="Select category"
+      interface="popover"
+    >
+      <ion-select-option>Category 1</ion-select-option>
+      <ion-select-option>Category 2</ion-select-option>
+    </ion-select>
 
-  <!-- Filter products that have name or description matching the text -->
-  <ion-searchbar></ion-searchbar>
+    <!-- Filter products that have name or description matching the text -->
+    <ion-searchbar></ion-searchbar>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>
-      Start with Ionic
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://ionicframework.com/docs/components"
-        >UI Components</a
-      >
-    </p>
+    <!-- Filter products by their availability (isAvailable property) -->
+    <ion-checkbox class="ion-margin ion-padding">
+      Product is available
+    </ion-checkbox>
+
+    <!-- Display products using the product component and data from the API -->
+    <ion-list class="ion-padding">
+      <ion-item> Product 1 </ion-item>
+      <ion-item> Product 2 </ion-item>
+    </ion-list>
   </div>
 </ion-content>

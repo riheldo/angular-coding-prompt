@@ -11,8 +11,8 @@ import { CategoryService } from '../services/category.service';
   imports: [IonicModule],
 })
 export class HomePage {
-  private productService = inject(ProductService);
-  private categoryService = inject(CategoryService);
+  // private productService = inject(ProductService);
+  // private categoryService = inject(CategoryService);
 
   constructor() {}
 }
