@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { ProductService } from '../services/product.service';
+import { CategoryService } from '../services/category.service';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +11,8 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class HomePage {
+  private productService = inject(ProductService);
+  private categoryService = inject(CategoryService);
+
   constructor() {}
 }
