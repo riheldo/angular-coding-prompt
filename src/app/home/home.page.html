@@ -11,22 +11,23 @@
       class="ion-padding"
       placeholder="Select category"
       interface="popover"
+      [ngModel]="categorySelected$|async"
+      (ngModelChange)="categorySelected$.next($event)"
     >
-      <ion-select-option>Category 1</ion-select-option>
-      <ion-select-option>Category 2</ion-select-option>
+      <ion-select-option *ngFor="let categoryItem of categories$|async" [value]="categoryItem.id">{{categoryItem.name}}</ion-select-option>
     </ion-select>
 
     <!-- Filter products that have name or description matching the text -->
-    <ion-searchbar></ion-searchbar>
+    <ion-searchbar [ngModel]="searchText$|async" (ngModelChange)="searchText$.next($event)"></ion-searchbar>
 
     <!-- Filter products by their availability (isAvailable property) -->
-    <ion-checkbox class="ion-margin ion-padding">
+    <ion-checkbox class="ion-margin ion-padding" [ngModel]="avlProductFilter$|async" (ngModelChange)="avlProductFilter$.next($event)">
       Product is available
     </ion-checkbox>
 
     <!-- Display products using the product component and data from the API -->
     <ion-list class="ion-padding">
-      <app-product></app-product>
+      <app-product *ngFor="let productItem of avlProducts$|async" [product]="productItem"></app-product>
     </ion-list>
   </div>
 </ion-content>

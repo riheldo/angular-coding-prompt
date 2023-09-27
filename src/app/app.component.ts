@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import {BrowserModule} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
